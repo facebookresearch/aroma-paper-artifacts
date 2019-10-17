@@ -1,0 +1,833 @@
+question_url,question_author,question_author_url,question_upvotes,question_title,answer_url,answer_author,answer_author_url,answer_upvotes,full_code_snippet,query_code_snippet,categorization,partial_code_snippet,partial_code_categorization
+https://stackoverflow.com/questions/2091465,UMAR,https://stackoverflow.com/users/249991/umar,1021,How do I pass data between Activities in Android application?,https://stackoverflow.com/questions/7325248,user914425,https://stackoverflow.com/users/914425/user914425,1294,"String value=""Hello world"";
+Intent i = new Intent(CurrentActivity.this, NewActivity.class);    
+i.putExtra(""key"",value);
+startActivity(i);","String value=""Hello world"";
+Intent i = new Intent(CurrentActivity.this, NewActivity.class);    
+i.putExtra(""key"",value);
+startActivity(i);",Configuring objects,"String value=""Hello world"";
+Intent i = new Intent(CurrentActivity.this, NewActivity.class);  
+i.putExtra(""key"",value);",Exact recommendation
+https://stackoverflow.com/questions/2734270,Richard,https://stackoverflow.com/users/233202/richard,804,How do I make links in a TextView clickable?,https://stackoverflow.com/questions/2746708,Richard,https://stackoverflow.com/users/233202/richard,1072,"// text2 has links specified by putting <a> tags in the string
+    // resource.  By default these links will appear but not
+    // respond to user input.  To make them active, you need to
+    // call setMovementMethod() on the TextView object.
+
+    TextView t2 = (TextView) findViewById(R.id.text2);
+    t2.setMovementMethod(LinkMovementMethod.getInstance());","TextView t2 = (TextView) findViewById(R.id.text2);
+    t2.setMovementMethod(LinkMovementMethod.getInstance());",Configuring objects,TextView t2 = (TextView) findViewById(R.id.text2);,Exact recommendation
+https://stackoverflow.com/questions/24618829,EyesClear,https://stackoverflow.com/users/953682/eyesclear,665,How to add dividers and spaces between items in RecyclerView?,https://stackoverflow.com/questions/27037230,EyesClear,https://stackoverflow.com/users/953682/eyesclear,905,"DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+    layoutManager.getOrientation());
+recyclerView.addItemDecoration(dividerItemDecoration);","DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+    layoutManager.getOrientation());
+recyclerView.addItemDecoration(dividerItemDecoration);",Configuring objects,"DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(),
+    layoutManager.getOrientation());",Exact recommendation
+https://stackoverflow.com/questions/2394935,Janusz,https://stackoverflow.com/users/114066/janusz,515,Can I underline text in an android layout?,https://stackoverflow.com/questions/2394939,Anthony Forloney,https://stackoverflow.com/users/166712/anthony-forloney,891,"TextView textView = (TextView) view.findViewById(R.id.textview);
+SpannableString content = new SpannableString(""Content"");
+content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+textView.setText(content);","TextView textView = (TextView) view.findViewById(R.id.textview);
+SpannableString content = new SpannableString(""Content"");
+content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+textView.setText(content);",Configuring objects,"TextView textView = (TextView) view.findViewById(R.id.textview);
+SpannableString content = new SpannableString(""Content"");",Exact recommendation
+https://stackoverflow.com/questions/4817900,alexanderblom,https://stackoverflow.com/users/253583/alexanderblom,239,Android Fragments and animation,https://stackoverflow.com/questions/4819665,Reto Meier,https://stackoverflow.com/users/822/reto-meier,354,"FragmentTransaction ft = getFragmentManager().beginTransaction();
+ft.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+
+DetailsFragment newFragment = DetailsFragment.newInstance();
+
+ft.replace(R.id.details_fragment_container, newFragment, ""detailFragment"");
+
+// Start the animated transition.
+ft.commit();","FragmentTransaction ft = getFragmentManager().beginTransaction();
+ft.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+
+DetailsFragment newFragment = DetailsFragment.newInstance();
+
+ft.replace(R.id.details_fragment_container, newFragment, ""detailFragment"");
+ft.commit();",Configuring objects,"FragmentTransaction ft = getFragmentManager().beginTransaction();
+ft.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+
+DetailsFragment newFragment = DetailsFragment.newInstance();
+
+ft.replace(R.id.details_fragment_container, newFragment, ""detailFragment"");",Exact recommendation
+https://stackoverflow.com/questions/11947603,Pijusn,https://stackoverflow.com/users/553941/pijusn,237,setBackground vs setBackgroundDrawable (Android),https://stackoverflow.com/questions/11947755,Warpzit,https://stackoverflow.com/users/969325/warpzit,388,"int sdk = android.os.Build.VERSION.SDK_INT;
+if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+    setBackgroundDrawable();
+} else {
+    setBackground();
+}","int sdk = android.os.Build.VERSION.SDK_INT;
+if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+    setBackgroundDrawable();
+} else {
+    setBackground();
+}",Configuring objects,"int sdk = android.os.Build.VERSION.SDK_INT;
+if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+} else {
+}",Exact recommendation
+https://stackoverflow.com/questions/4616095,Fahad Ali Shaikh,https://stackoverflow.com/users/565591/fahad-ali-shaikh,922,How to get the build/version number of your Android application?,https://stackoverflow.com/questions/6593822,plus-,https://stackoverflow.com/users/709635/plus,1753,"try {
+    PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+    String version = pInfo.versionName;
+} catch (PackageManager.NameNotFoundException e) {
+    e.printStackTrace();
+}","try {
+    PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);
+    String version = pInfo.versionName;
+} catch (PackageManager.NameNotFoundException e) {
+    e.printStackTrace();
+}","Configuring objects, Correlated statements","PackageInfo pInfo = this.getPackageManager().getPackageInfo(getPackageName(), 0);",Exact recommendation
+https://stackoverflow.com/questions/3028306,Tom Leese,https://stackoverflow.com/users/363606/tom-leese,893,"Download a file with Android, and showing the progress in a ProgressDialog",https://stackoverflow.com/questions/3028660,community wiki,N/A,1706,"String url = ""url you want to download"";
+DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+request.setDescription(""Some descrition"");
+request.setTitle(""Some title"");
+// in order for this if to run, you must use the android 3.2 to compile your app
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    request.allowScanningByMediaScanner();
+    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+}
+request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, ""name-of-the-file.ext"");
+
+// get download service and enqueue file
+DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+manager.enqueue(request);","String url = ""url you want to download"";
+DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+request.setDescription(""Some descrition"");
+request.setTitle(""Some title"");
+
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    request.allowScanningByMediaScanner();
+    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+}
+request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, ""name-of-the-file.ext"");
+DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+manager.enqueue(request);","Configuring objects, Correlated statements","String url = ""url you want to download"";
+DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+request.setDescription(""Some descrition"");
+request.setTitle(""Some title"");
+// in order for this if to run, you must use the android 3.2 to compile your app
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+    request.allowScanningByMediaScanner();
+    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);",Exact recommendation
+https://stackoverflow.com/questions/4605527,Indhu,https://stackoverflow.com/users/504712/indhu,653,Converting pixels to dp,https://stackoverflow.com/questions/6327095,prasobh,https://stackoverflow.com/users/795451/prasobh,882,"/// Converts 14 dip into its equivalent px
+
+Resources r = getResources();
+float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 14, r.getDisplayMetrics());","Resources r = getResources();
+float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 14, r.getDisplayMetrics());","Configuring objects, Correlated statements",Resources r = getResources();,Alternative recommendation
+https://stackoverflow.com/questions/3918517,Sako73,https://stackoverflow.com/users/226376/sako73,237,Calling startActivity() from outside of an Activity context,https://stackoverflow.com/questions/3918838,Alex Volovoy,https://stackoverflow.com/users/176761/alex-volovoy,426,myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);,myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);,"Configuring objects, Error checking and handling",,
+https://stackoverflow.com/questions/2938502,OMGKurtNilsen,https://stackoverflow.com/users/348776/omgkurtnilsen,235,Sending POST data in Android,https://stackoverflow.com/questions/2938787,Primal Pappachan,https://stackoverflow.com/users/323404/primal-pappachan,281,"public class CallAPI extends AsyncTask<String, String, String> {
+
+        public CallAPI(){
+            //set context variables if required
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+
+         @Override
+         protected void doInBackground(String... params) {
+
+            String urlString = params[0]; // URL to call
+
+            String data = params[1]; //data to post
+
+            OutputStream out = null;
+            try {
+
+                URL url = new URL(urlString);
+
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+
+                out = new BufferedOutputStream(urlConnection.getOutputStream());
+
+                BufferedWriter writer = new BufferedWriter (new OutputStreamWriter(out, ""UTF-8""));
+
+                writer.write(data);
+
+                writer.flush();
+
+                writer.close();
+
+                out.close();
+
+                urlConnection.connect();
+
+
+            } catch (Exception e) {
+
+                System.out.println(e.getMessage());
+
+
+
+            }
+
+        }
+    }","OutputStream out = null;
+try {
+    URL url = new URL(urlString);
+    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+    out = new BufferedOutputStream(urlConnection.getOutputStream());
+    BufferedWriter writer = new BufferedWriter (new OutputStreamWriter(out, ""UTF-8""));
+    writer.write(data);
+    writer.flush();
+    writer.close();
+    out.close();
+    urlConnection.connect();
+} catch (Exception e) {
+    System.out.println(e.getMessage());
+}",Configuring objects,"URL url = new URL(urlString);
+    HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+    out = new BufferedOutputStream(urlConnection.getOutputStream());
+    BufferedWriter writer = new BufferedWriter (new OutputStreamWriter(out, ""UTF-8""));",Exact recommendation
+https://stackoverflow.com/questions/3028306,Tom Leese,https://stackoverflow.com/users/363606/tom-leese,893,"Download a file with Android, and showing the progress in a ProgressDialog",https://stackoverflow.com/questions/3028660,"community wiki
+",N/A,1706,"/**
+ * @param context used to check the device version and DownloadManager information
+ * @return true if the download manager is available
+ */
+public static boolean isDownloadManagerAvailable(Context context) {
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+        return true;
+    }
+    return false;
+}","if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+        return true;
+    }
+    return false;",Correlated statements,if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {},Exact recommendation
+https://stackoverflow.com/questions/2591036,Janusz,https://stackoverflow.com/users/114066/janusz,773,How to hide the title bar for an Activity in XML with existing custom theme,https://stackoverflow.com/questions/2591311,YaW,https://stackoverflow.com/users/309853/yaw,984,"//Remove title bar
+this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+//Remove notification bar
+this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+//set content view AFTER ABOVE sequence (to avoid crash)
+this.setContentView(R.layout.your_layout_name_here);","this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+this.setContentView(R.layout.your_layout_name_here);",Correlated statements,"this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);",Exact recommendation
+https://stackoverflow.com/questions/10407159,Hesam,https://stackoverflow.com/users/513413/hesam,762,How to manage `startActivityForResult` on Android?,https://stackoverflow.com/questions/10407371,Nishant,https://stackoverflow.com/users/829188/nishant,2027,"Intent returnIntent = new Intent();
+returnIntent.putExtra(""result"",result);
+setResult(Activity.RESULT_OK,returnIntent);
+finish();","Intent returnIntent = new Intent();
+returnIntent.putExtra(""result"",result);
+setResult(Activity.RESULT_OK,returnIntent);
+finish();",Correlated statements,"Intent returnIntent = new Intent();
+returnIntent.putExtra(""result"",result);
+setResult(Activity.RESULT_OK,returnIntent);",Exact recommendation
+https://stackoverflow.com/questions/3875184,michael,https://stackoverflow.com/users/286802/michael,741,Can't create handler inside thread that has not called Looper.prepare(),https://stackoverflow.com/questions/9815528,Jacob Marble,https://stackoverflow.com/users/110358/jacob-marble,735,"activity.runOnUiThread(new Runnable() {
+  public void run() {
+    Toast.makeText(activity, ""Hello"", Toast.LENGTH_SHORT).show();
+  }
+});","   Toast.makeText(activity, ""Hello"", Toast.LENGTH_SHORT).show();",Correlated statements,,
+https://stackoverflow.com/questions/6217378,Manu,https://stackoverflow.com/users/781501/manu,655,Place cursor at the end of text in EditText,https://stackoverflow.com/questions/6624186,Marqs,https://stackoverflow.com/users/400493/marqs,1073,"EditText et = (EditText)findViewById(R.id.inbox);
+et.setSelection(et.getText().length());","EditText et = (EditText)findViewById(R.id.inbox);
+et.setSelection(et.getText().length());",Correlated statements,EditText et = (EditText)findViewById(R.id.inbox);,Exact recommendation
+https://stackoverflow.com/questions/1513485,mudit,https://stackoverflow.com/users/152867/mudit,597,How do I get the current GPS location programmatically in Android?,https://stackoverflow.com/questions/10917500,swiftBoy,https://stackoverflow.com/users/1371853/swiftboy,367,"LocationListener locationListener = new MyLocationListener();
+locationManager.requestLocationUpdates(
+LocationManager.GPS_PROVIDER, 5000, 10, locationListener);","LocationListener locationListener = new MyLocationListener();
+locationManager.requestLocationUpdates(
+LocationManager.GPS_PROVIDER, 5000, 10, locationListener);",Correlated statements,LocationListener locationListener = new MyLocationListener();,Exact recommendation
+https://stackoverflow.com/questions/2736389,kaibuki,https://stackoverflow.com/users/328518/kaibuki,589,How to pass an object from one activity to another on Android,https://stackoverflow.com/questions/2736612,Samuh,https://stackoverflow.com/users/236128/samuh,701,"//To pass:
+intent.putExtra(""MyClass"", obj);
+
+// To retrieve object in second Activity
+getIntent().getSerializableExtra(""MyClass"");","intent.putExtra(""MyClass"", obj);
+getIntent().getSerializableExtra(""MyClass"");",Correlated statements,"intent.putExtra(""MyClass"", obj);",Alternative recommendation
+https://stackoverflow.com/questions/4186021,Adham,https://stackoverflow.com/users/508377/adham,491,How to start new activity on button click,https://stackoverflow.com/questions/4186097,Emmanuel,https://stackoverflow.com/users/442512/emmanuel,883," void onCreate(Bundle savedInstanceState) {
+    Intent intent = getIntent();
+    String value = intent.getStringExtra(""key""); //if it's a string you stored.
+}","    Intent intent = getIntent();
+    String value = intent.getStringExtra(""key""); ",Correlated statements,    Intent intent = getIntent();,Alternative recommendation
+https://stackoverflow.com/questions/4576330,Brendan Weinstein,https://stackoverflow.com/users/546901/brendan-weinstein,238,What does it mean to inflate a view from an xml file?,https://stackoverflow.com/questions/4576362,Cristian,https://stackoverflow.com/users/244296/cristian,227,"class Name extends Activity{
+    public void onCreate(){
+         // the OS will inflate the your_layout.xml
+         // file and use it for this activity
+         setContentView(R.layout.your_layout);
+    }
+}",setContentView(R.layout.your_layout);,Correlated statements,,
+https://stackoverflow.com/questions/3572463,Brigadier,https://stackoverflow.com/users/431505/brigadier,1518,What is 'Context' on Android?,https://stackoverflow.com/questions/3572553,Sameer Segal,https://stackoverflow.com/users/356580/sameer-segal,1197,"context.getSystemService(LAYOUT_INFLATER_SERVICE)
+getApplicationContext().getSharedPreferences(*name*, *mode*);","context.getSystemService(LAYOUT_INFLATER_SERVICE);
+getApplicationContext().getSharedPreferences(name, mode);",Correlated statements,context.getSystemService(LAYOUT_INFLATER_SERVICE);,Alternative recommendation
+https://stackoverflow.com/questions/3624280,Muhammad Maqsoodur Rehman,https://stackoverflow.com/users/2355649/muhammad-maqsoodur-rehman,602,"How to use SharedPreferences in Android to store, fetch and edit values",https://stackoverflow.com/questions/3624358,naikus,https://stackoverflow.com/users/306602/naikus,755,"Date dt = getSomeDate();
+prefs.edit().putLong(dateTimeKey, dt.getTime()).apply();","Date dt = getSomeDate();
+prefs.edit().putLong(dateTimeKey, dt.getTime()).apply();",Correlated statements,Date dt = getSomeDate();,Alternative recommendation
+https://stackoverflow.com/questions/2317428,Sara,https://stackoverflow.com/users/270273/sara,237,Android: I want to shake it,https://stackoverflow.com/questions/2318356,Thilo Köhler,https://stackoverflow.com/users/273501/thilo-köhler,306,"if (mAccel > 12) {
+    Toast toast = Toast.makeText(getApplicationContext(), ""Device has shaken."", Toast.LENGTH_LONG);
+    toast.show();
+}","if (mAccel > 12) {
+    Toast toast = Toast.makeText(getApplicationContext(), ""Device has shaken."", Toast.LENGTH_LONG);
+    toast.show();
+}",Correlated statements,"Toast toast = Toast.makeText(getApplicationContext(), ""Device has shaken."", Toast.LENGTH_LONG);",Exact recommendation
+https://stackoverflow.com/questions/1109022,"community wiki
+",N/A,3005,Close/hide the Android Soft Keyboard,https://stackoverflow.com/questions/1109108,community wiki,N/A,4115,"// Check if no view has focus:
+View view = this.getCurrentFocus();
+if (view != null) {  
+    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+}","View view = this.getCurrentFocus();
+if (view != null) {  
+    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+}",Correlated statements,"View view = this.getCurrentFocus();
+if (view != null) {  
+    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+   
+
+}",Exact recommendation
+https://stackoverflow.com/questions/4486034,Lalith,https://stackoverflow.com/users/297119/lalith,520,Get root view from current activity,https://stackoverflow.com/questions/4488149,Dmitry Ryadnenko,https://stackoverflow.com/users/544406/dmitry-ryadnenko,861,"final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this
+            .findViewById(android.R.id.content)).getChildAt(0);","final ViewGroup viewGroup = (ViewGroup) ((ViewGroup) this
+            .findViewById(android.R.id.content)).getChildAt(0);",Correlated statements,,
+https://stackoverflow.com/questions/2201917,Arutha,https://stackoverflow.com/users/164460/arutha,1047,How can I open a URL in Android's web browser from my application?,https://stackoverflow.com/questions/2201999,Mark B,https://stackoverflow.com/users/13070/mark-b,1993,"Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""http://www.google.com""));
+startActivity(browserIntent);","Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""http://www.google.com""));
+startActivity(browserIntent);",Error checking and handling,"Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(""http://www.google.com""));",Exact recommendation
+https://stackoverflow.com/questions/937313,gav,https://stackoverflow.com/users/111734/gav,984,Fling gesture detection on grid layout,https://stackoverflow.com/questions/938657,"community wiki
+",N/A,771,"// Do this for each view added to the grid
+imageView.setOnClickListener(SelectFilterActivity.this); 
+imageView.setOnTouchListener(gestureListener);","imageView.setOnClickListener(SelectFilterActivity.this); 
+imageView.setOnTouchListener(gestureListener);",Error checking and handling,imageView.setOnClickListener(SelectFilterActivity.this); ,Alternative recommendation
+https://stackoverflow.com/questions/600207,Bee,https://stackoverflow.com/users/58164/bee,774,How to check if a service is running on Android?,https://stackoverflow.com/questions/5921190,geekQ,https://stackoverflow.com/users/111995/geekq,1491,"private boolean isMyServiceRunning(Class<?> serviceClass) {
+    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+        if (serviceClass.getName().equals(service.service.getClassName())) {
+            return true;
+        }
+    }
+    return false;
+}","
+    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
+        if (serviceClass.getName().equals(service.service.getClassName())) {
+            return true;
+        }
+    }
+    return false;
+",Error checking and handling,"    ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+    for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {}",Exact recommendation
+https://stackoverflow.com/questions/6200533,JustMe,https://stackoverflow.com/users/778037/justme,652,Set TextView style (bold or italic),https://stackoverflow.com/questions/6200841,Tanmay Mandal,https://stackoverflow.com/users/463721/tanmay-mandal,1525,"textView.setTypeface(null, Typeface.BOLD_ITALIC);
+textView.setTypeface(null, Typeface.BOLD);
+textView.setTypeface(null, Typeface.ITALIC);
+textView.setTypeface(null, Typeface.NORMAL);","textView.setTypeface(null, Typeface.BOLD_ITALIC);
+textView.setTypeface(null, Typeface.BOLD);
+textView.setTypeface(null, Typeface.ITALIC);
+textView.setTypeface(null, Typeface.NORMAL);",Error checking and handling,"textView.setTypeface(null, Typeface.BOLD_ITALIC);
+textView.setTypeface(null, Typeface.BOLD);",Exact recommendation
+https://stackoverflow.com/questions/4238921,dan,https://stackoverflow.com/users/354742/dan,561,Detect whether there is an Internet connection available on Android,https://stackoverflow.com/questions/4239019,Alex Jasmin,https://stackoverflow.com/users/162407/alex-jasmin,1230,"private boolean isNetworkAvailable() {
+    ConnectivityManager connectivityManager 
+          = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+    return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+}","ConnectivityManager connectivityManager 
+          = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+    return activeNetworkInfo != null && activeNetworkInfo.isConnected();",Error checking and handling,"ConnectivityManager connectivityManager 
+          = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);",Exact recommendation
+https://stackoverflow.com/questions/18634207,AndroidDev,https://stackoverflow.com/users/365019/androiddev,233,"Difference between add(), replace(), and addToBackStack()",https://stackoverflow.com/questions/18634392,My God,https://stackoverflow.com/users/1538553/my-god,266,fragmentTransaction.addToBackStack(str);,fragmentTransaction.addToBackStack(str);,Error checking and handling,,
+https://stackoverflow.com/questions/477572,community wiki,N/A,1083,Strange out of memory issue while loading an image to a Bitmap object,https://stackoverflow.com/questions/823966,"community wiki
+",N/A,849,"BitmapFactory.Options options = new BitmapFactory.Options();
+options.inSampleSize = 8;
+Bitmap preview_bitmap = BitmapFactory.decodeStream(is, null, options);","BitmapFactory.Options options = new BitmapFactory.Options();
+options.inSampleSize = 8;
+Bitmap preview_bitmap = BitmapFactory.decodeStream(is, null, options);","Error checking and handling, Configuring objects","BitmapFactory.Options options = new BitmapFactory.Options();
+options.inSampleSize = 8;",Exact recommendation
+https://stackoverflow.com/questions/9245408,Graham Smith,https://stackoverflow.com/users/649979/graham-smith,566,Best practice for instantiating a new Android Fragment,https://stackoverflow.com/questions/9245510,yydl,https://stackoverflow.com/users/312499/yydl,941,"public static MyFragment newInstance(int someInt) {
+    MyFragment myFragment = new MyFragment();
+
+    Bundle args = new Bundle();
+    args.putInt(""someInt"", someInt);
+    myFragment.setArguments(args);
+
+    return myFragment;
+}","    MyFragment myFragment = new MyFragment();
+
+    Bundle args = new Bundle();
+    args.putInt(""someInt"", someInt);
+    myFragment.setArguments(args);
+
+    return myFragment;","Error checking and handling, Configuring objects","   MyFragment myFragment = new MyFragment();
+
+    Bundle args = new Bundle();",Exact recommendation
+https://stackoverflow.com/questions/3035692,Rob,https://stackoverflow.com/users/283630/rob,776,How to convert a Drawable to a Bitmap?,https://stackoverflow.com/questions/3035869,Praveen,https://stackoverflow.com/users/267269/praveen,1111,"Bitmap icon = BitmapFactory.decodeResource(context.getResources(),
+                                           R.drawable.icon_resource);","Bitmap icon = BitmapFactory.decodeResource(context.getResources(), R.drawable.icon_resource);","Error checking and handling, Post-processing",,
+https://stackoverflow.com/questions/37711082,Parth Patel,https://stackoverflow.com/users/6426010/parth-patel,236,How to handle notification when app in background in Firebase,https://stackoverflow.com/questions/37845174,Antonio,https://stackoverflow.com/users/2349947/antonio,420,"@Override
+public void onMessageReceived(RemoteMessage remoteMessage) { 
+     Map<String, String> data = remoteMessage.getData();
+     String myCustomKey = data.get(""my_custom_key"");
+
+     // Manage data
+}","Map<String, String> data = remoteMessage.getData();
+     String myCustomKey = data.get(""my_custom_key"");","Error checking and handling, Post-processing","Map<String, String> data = remoteMessage.getData();",Exact recommendation
+https://stackoverflow.com/questions/3004515,poeschlorn,https://stackoverflow.com/users/317301/poeschlorn,609,Sending an Intent to browser to open specific URL,https://stackoverflow.com/questions/3004542,aioobe,https://stackoverflow.com/users/276052/aioobe,1470,"String url = ""http://www.example.com"";
+Intent i = new Intent(Intent.ACTION_VIEW);
+i.setData(Uri.parse(url));
+startActivity(i);","String url = ""http://www.example.com"";
+Intent i = new Intent(Intent.ACTION_VIEW);
+i.setData(Uri.parse(url));
+startActivity(i);",Error checking and handling,"String url = ""http://www.example.com"";
+Intent i = new Intent(Intent.ACTION_VIEW);
+i.setData(Uri.parse(url));",Exact recommendation
+https://stackoverflow.com/questions/2711858,Samuh,https://stackoverflow.com/users/236128/samuh,238,Is it possible to set a custom font for entire of application?,https://stackoverflow.com/questions/16883281,weston,https://stackoverflow.com/users/360211/weston,435,"public final class Application extends android.app.Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        FontsOverride.setDefaultFont(this, ""DEFAULT"", ""MyFontAsset.ttf"");
+        FontsOverride.setDefaultFont(this, ""MONOSPACE"", ""MyFontAsset2.ttf"");
+        FontsOverride.setDefaultFont(this, ""SERIF"", ""MyFontAsset3.ttf"");
+        FontsOverride.setDefaultFont(this, ""SANS_SERIF"", ""MyFontAsset4.ttf"");
+    }
+}","super.onCreate();
+        FontsOverride.setDefaultFont(this, ""DEFAULT"", ""MyFontAsset.ttf"");
+        FontsOverride.setDefaultFont(this, ""MONOSPACE"", ""MyFontAsset2.ttf"");
+        FontsOverride.setDefaultFont(this, ""SERIF"", ""MyFontAsset3.ttf"");
+        FontsOverride.setDefaultFont(this, ""SANS_SERIF"", ""MyFontAsset4.ttf"");",No extra lines,"super.onCreate();
+        FontsOverride.setDefaultFont(this, ""DEFAULT"", ""MyFontAsset.ttf"");
+        FontsOverride.setDefaultFont(this, ""MONOSPACE"", ""MyFontAsset2.ttf"");",Alternative recommendation
+https://stackoverflow.com/questions/2785485,Tyler,https://stackoverflow.com/users/314994/tyler,2266,Is there a unique Android device ID?,https://stackoverflow.com/questions/2785493,Anthony Forloney,https://stackoverflow.com/users/166712/anthony-forloney,1648,"import android.provider.Settings.Secure;
+
+private String android_id = Secure.getString(getContext().getContentResolver(),
+                                                        Secure.ANDROID_ID);","String android_id = Secure.getString(getContext().getContentResolver(), Secure.ANDROID_ID);",Post-processing,,
+https://stackoverflow.com/questions/151777,Bernard,https://stackoverflow.com/users/61/bernard,2199,Saving Android Activity state using Save Instance State,https://stackoverflow.com/questions/151940,Reto Meier,https://stackoverflow.com/users/822/reto-meier,2223,"void onRestoreInstanceState(Bundle savedInstanceState) {
+  super.onRestoreInstanceState(savedInstanceState);
+  // Restore UI state from the savedInstanceState.
+  // This bundle has also been passed to onCreate.
+  boolean myBoolean = saved","super.onRestoreInstanceState(savedInstanceState);
+boolean myBoolean = saved;",Post-processing,super.onRestoreInstanceState(savedInstanceState);,Alternative recommendation
+https://stackoverflow.com/questions/1016896,Niko Gamulin,https://stackoverflow.com/users/22996/niko-gamulin,1653,Get screen dimensions in pixels,https://stackoverflow.com/questions/1016941,Josef Pfleger,https://stackoverflow.com/users/98401/josef-pfleger,3302,"Display display = getWindowManager().getDefaultDisplay();
+Point size = new Point();
+display.getSize(size);
+int width = size.x;
+int height = size.y;","Display display = getWindowManager().getDefaultDisplay();
+Point size = new Point();
+display.getSize(size);
+int width = size.x;
+int height = size.y;",Post-processing,"Display display = getWindowManager().getDefaultDisplay();
+Point size = new Point();
+display.getSize(size);",Exact recommendation
+https://stackoverflow.com/questions/5369682,M7M,https://stackoverflow.com/users/650523/m7m,865,Get current time and date on Android,https://stackoverflow.com/questions/5369753,user658042,N/A,1035,"import java.util.Calendar
+
+Date currentTime = Calendar.getInstance().getTime();",Date currentTime = Calendar.getInstance().getTime();,Post-processing,,
+https://stackoverflow.com/questions/4181774,Alex,https://stackoverflow.com/users/482568/alex,240,Show Image View from file path?,https://stackoverflow.com/questions/4182060,Paresh Mayani,https://stackoverflow.com/users/379693/paresh-mayani,536,"File imgFile = new  File(""/sdcard/Images/test_image.jpg"");
+
+if(imgFile.exists()){
+
+    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+    ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+
+    myImage.setImageBitmap(myBitmap);
+
+}","File imgFile = new  File(""/sdcard/Images/test_image.jpg"");
+
+if(imgFile.exists()){
+
+    Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+
+    ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+
+    myImage.setImageBitmap(myBitmap);
+
+}",Post-processing,"Bitmap myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+ImageView myImage = (ImageView) findViewById(R.id.imageviewTest);
+myImage.setImageBitmap(myBitmap);",Exact recommendation
+https://stackoverflow.com/questions/4576330,Brendan Weinstein,https://stackoverflow.com/users/546901/brendan-weinstein,238,What does it mean to inflate a view from an xml file?,https://stackoverflow.com/questions/4576362,Cristian,https://stackoverflow.com/users/244296/cristian,227,"LayoutInflater inflater = LayoutInflater.from(YourActivity.this); // 1
+View theInflatedView = inflater.inflate(R.layout.your_layout, null); // 2 and 3","LayoutInflater inflater = LayoutInflater.from(YourActivity.this); // 1
+View theInflatedView = inflater.inflate(R.layout.your_layout, null); // 2 and 3",Post-processing,LayoutInflater inflater = LayoutInflater.from(YourActivity.this);,Exact recommendation
+https://stackoverflow.com/questions/2317428,Sara,https://stackoverflow.com/users/270273/sara,237,Android: I want to shake it,https://stackoverflow.com/questions/2318356,Thilo Köhler,https://stackoverflow.com/users/273501/thilo-köhler,306,"/* put this into your activity class */
+  private SensorManager mSensorManager;
+  private float mAccel; // acceleration apart from gravity
+  private float mAccelCurrent; // current acceleration including gravity
+  private float mAccelLast; // last acceleration including gravity
+
+  private final SensorEventListener mSensorListener = new SensorEventListener() {
+
+    public void onSensorChanged(SensorEvent se) {
+      float x = se.values[0];
+      float y = se.values[1];
+      float z = se.values[2];
+      mAccelLast = mAccelCurrent;
+      mAccelCurrent = (float) Math.sqrt((double) (x*x + y*y + z*z));
+      float delta = mAccelCurrent - mAccelLast;
+      mAccel = mAccel * 0.9f + delta; // perform low-cut filter
+    }
+
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
+  };
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+    mSensorManager.registerListener(mSensorListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+  }
+
+  @Override
+  protected void onPause() {
+    mSensorManager.unregisterListener(mSensorListener);
+    super.onPause();
+  }","float x = se.values[0];
+float y = se.values[1];
+float z = se.values[2];
+mAccelLast = mAccelCurrent;
+mAccelCurrent = (float) Math.sqrt((double) (x*x + y*y + z*z));
+float delta = mAccelCurrent - mAccelLast;
+mAccel = mAccel * 0.9f + delta; // perform low-cut filter",Post-processing,"float x = se.values[0];
+float y = se.values[1];
+float z = se.values[2];
+mAccelLast = mAccelCurrent;
+mAccelCurrent = (float) Math.sqrt((double) (x*x + y*y + z*z));
+float delta = mAccelCurrent - mAccelLast;",Exact recommendation
+https://stackoverflow.com/questions/4955268,Beginner,https://stackoverflow.com/users/569654/beginner,237,How to set a bitmap from resource,https://stackoverflow.com/questions/4955305,xandy,https://stackoverflow.com/users/109112/xandy,672,"Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.image);","Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.image);",Post-processing,,
+https://stackoverflow.com/questions/21881992,"community wiki
+",N/A,236,When is SQLiteOpenHelper onCreate() / onUpgrade() run?,https://stackoverflow.com/questions/21881993,"community wiki
+",N/A,316,getWritableDatabase(),getWritableDatabase(),Post-processing,,
+https://stackoverflow.com/questions/4233873,Adham,https://stackoverflow.com/users/508377/adham,598,How do I get extra data from intent on Android?,https://stackoverflow.com/questions/4233898,Malcolm,https://stackoverflow.com/users/45668/malcolm,991,"String id = intent.getStringExtra(""id"");
+String name = intent.getStringExtra(""name"");","String id = intent.getStringExtra(""id"");
+String name = intent.getStringExtra(""name"");","Post-processing, Correlated statements","String id = intent.getStringExtra(""id"");",Exact recommendation
+https://stackoverflow.com/questions/2938502,OMGKurtNilsen,https://stackoverflow.com/users/348776/omgkurtnilsen,235,Sending POST data in Android,https://stackoverflow.com/questions/2938787,Primal Pappachan,https://stackoverflow.com/users/323404/primal-pappachan,281,"public void postData() {
+    // Create a new HttpClient and Post Header
+    HttpClient httpclient = new DefaultHttpClient();
+    HttpPost httppost = new HttpPost(""http://www.yoursite.com/script.php"");
+
+    try {
+        // Add your data
+        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+        nameValuePairs.add(new BasicNameValuePair(""id"", ""12345""));
+        nameValuePairs.add(new BasicNameValuePair(""stringdata"", ""Hi""));
+        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+        // Execute HTTP Post Request
+        HttpResponse response = httpclient.execute(httppost);
+
+    } catch (ClientProtocolException e) {
+        // TODO Auto-generated catch block
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+    }
+}","HttpClient httpclient = new DefaultHttpClient();
+    HttpPost httppost = new HttpPost(""http://www.yoursite.com/script.php"");
+
+    try {
+       
+        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+        nameValuePairs.add(new BasicNameValuePair(""id"", ""12345""));
+        nameValuePairs.add(new BasicNameValuePair(""stringdata"", ""Hi""));
+        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+        
+        HttpResponse response = httpclient.execute(httppost);
+
+    } catch (ClientProtocolException e) {
+        
+    } catch (IOException e) {
+        
+    }","Post-processing, Error checking and handling","HttpClient httpclient = new DefaultHttpClient();
+    HttpPost httppost = new HttpPost(""http://www.yoursite.com/script.php"");
+        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+        nameValuePairs.add(new BasicNameValuePair(""id"", ""12345""));
+        nameValuePairs.add(new BasicNameValuePair(""stringdata"", ""Hi""));
+        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));",Exact recommendation
+https://stackoverflow.com/questions/2139134,community wiki,N/A,731,How to send an object from one Android Activity to another using Intents?,https://stackoverflow.com/questions/2141166,community wiki,N/A,677,"i.putExtra(""parcelable_extra"", (Parcelable) myParcelableObject);
+i.putExtra(""serializable_extra"", (Serializable) myParcelableObject);","i.putExtra(""parcelable_extra"", (Parcelable) myParcelableObject);
+i.putExtra(""serializable_extra"", (Serializable) myParcelableObject);",Pre-processing,"i.putExtra(""parcelable_extra"", (Parcelable) myParcelableObject);",Alternative recommendation
+https://stackoverflow.com/questions/3028306,Tom Leese,https://stackoverflow.com/users/363606/tom-leese,893,"Download a file with Android, and showing the progress in a ProgressDialog",https://stackoverflow.com/questions/3028660,community wiki,N/A,1706,"// initialize the progress dialog like in the first example
+
+// this is how you fire the downloader
+mProgressDialog.show();
+Intent intent = new Intent(this, DownloadService.class);
+intent.putExtra(""url"", ""url of the file to download"");
+intent.putExtra(""receiver"", new DownloadReceiver(new Handler()));
+startService(intent);","mProgressDialog.show();
+Intent intent = new Intent(this, DownloadService.class);
+intent.putExtra(""url"", ""url of the file to download"");
+intent.putExtra(""receiver"", new DownloadReceiver(new Handler()));
+startService(intent);",Unclustered,"mProgressDialog.show();
+Intent intent = new Intent(this, DownloadService.class);
+intent.putExtra(""url"", ""url of the file to download"");",Exact recommendation
+https://stackoverflow.com/questions/4481226,coreSOLO,https://stackoverflow.com/users/453906/coresolo,241,Creating a system overlay window (always on top),https://stackoverflow.com/questions/4482868,Sarwar Erfan,https://stackoverflow.com/users/408863/sarwar-erfan,144,"""@Override
+public void onCreate() {
+        super.onCreate();
+        Toast.makeText(getBaseContext(),""onCreate"", Toast.LENGTH_LONG).show();
+        mView = new HUDView(this);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
+                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
+                PixelFormat.TRANSLUCENT);
+        params.gravity = Gravity.RIGHT | Gravity.TOP;
+        params.setTitle(""Load Average"");
+        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        wm.addView(mView, params);
+    }","        super.onCreate();
+        Toast.makeText(getBaseContext(),""onCreate"", Toast.LENGTH_LONG).show();
+        mView = new HUDView(this);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
+                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
+                PixelFormat.TRANSLUCENT);
+        params.gravity = Gravity.RIGHT | Gravity.TOP;
+        params.setTitle(""Load Average"");
+        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        wm.addView(mView, params);
+",Unclustered,"mView = new HUDView(this);
+        WindowManager.LayoutParams params = new WindowManager.LayoutParams(
+                WindowManager.LayoutParams.TYPE_SYSTEM_OVERLAY,
+                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
+                PixelFormat.TRANSLUCENT);",Exact recommendation
+https://stackoverflow.com/questions/3572463,Brigadier,https://stackoverflow.com/users/431505/brigadier,1518,What is 'Context' on Android?,https://stackoverflow.com/questions/3572553,Sameer Segal,https://stackoverflow.com/users/356580/sameer-segal,1197,"TextView tv = new TextView(getContext());
+ListAdapter adapter = new SimpleCursorAdapter(getApplicationContext(), ...);","TextView tv = new TextView(getContext());
+ListAdapter adapter = new SimpleCursorAdapter(getApplicationContext() );",Unclustered,TextView tv = new TextView(getContext());,Alternative recommendation
+https://stackoverflow.com/questions/456211,Isaac Waller,https://stackoverflow.com/users/764272/isaac-waller,1207,Activity restart on rotation Android,https://stackoverflow.com/questions/456918,Reto Meier,https://stackoverflow.com/users/822/reto-meier,885,"@Override
+public void onConfigurationChanged(Configuration newConfig) {
+  super.onConfigurationChanged(newConfig);
+  setContentView(R.layout.myLayout);
+}","super.onConfigurationChanged(newConfig);
+setContentView(R.layout.myLayout);",Unclustered,super.onConfigurationChanged(newConfig);,Alternative recommendation
+https://stackoverflow.com/questions/13341560,Amit,https://stackoverflow.com/users/720176/amit,241,How to create a Custom Dialog box in android?,https://stackoverflow.com/questions/13342157,Chintan Khetiya,https://stackoverflow.com/users/1562548/chintan-khetiya,411,"CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+cdd.show();","CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+cdd.show();",Configuring objects,"CustomDialogClass cdd = new CustomDialogClass(MainActivity.this);
+cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));",Exact recommendation
+https://stackoverflow.com/questions/2644134,Janusz,https://stackoverflow.com/users/114066/janusz,246,Android: How to create a Dialog without a title?,https://stackoverflow.com/questions/3407871,olivierg,https://stackoverflow.com/users/377478/olivierg,580,"Dialog dialog = new Dialog(context);
+dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);","Dialog dialog = new Dialog(context);
+dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);",Configuring objects,Dialog dialog = new Dialog(context);,Alternative recommendation
+https://stackoverflow.com/questions/2644134,Janusz,https://stackoverflow.com/users/114066/janusz,246,Android: How to create a Dialog without a title?,https://stackoverflow.com/questions/3407871,olivierg,https://stackoverflow.com/users/377478/olivierg,580,"Dialog dialog = new Dialog(context, R.style.FullHeightDialog);","Dialog dialog = new Dialog(context, R.style.FullHeightDialog);","Configuring objects, Correlated statements",,
+https://stackoverflow.com/questions/6077141,zvzej,https://stackoverflow.com/users/761487/zvzej,245,How to go back to previous page if back button is pressed in WebView?,https://stackoverflow.com/questions/6077173,FoamyGuy,https://stackoverflow.com/users/507810/foamyguy,409,"@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if (event.getAction() == KeyEvent.ACTION_DOWN) {
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_BACK:
+                if (mWebView.canGoBack()) {
+                    mWebV","if (event.getAction() == KeyEvent.ACTION_DOWN) {
+    switch (keyCode) {
+        case KeyEvent.KEYCODE_BACK:
+            if (mWebView.canGoBack()) {
+                mWebView.goBack();
+            } else {
+                finish();
+            }
+            return true;
+    }
+
+}
+return super.onKeyDown(keyCode, event);",Post-processing,"if (event.getAction() == KeyEvent.ACTION_DOWN) {
+    switch (keyCode) {
+}
+}",Exact recommendation
+https://stackoverflow.com/questions/6077141,zvzej,https://stackoverflow.com/users/761487/zvzej,245,How to go back to previous page if back button is pressed in WebView?,https://stackoverflow.com/questions/6077173,FoamyGuy,https://stackoverflow.com/users/507810/foamyguy,409,mWebView = (WebView) findViewById(R.id.webView);,mWebView = (WebView) findViewById(R.id.webView);,Post-processing,,
+https://stackoverflow.com/questions/1520887,Hubert,https://stackoverflow.com/users/116573/hubert,244,How to pause / sleep thread or process in Android?,https://stackoverflow.com/questions/3039718,tronman,https://stackoverflow.com/users/244104/tronman,411,"private static class MyHandler extends Handler {}
+private final MyHandler mHandler = new MyHandler();
+
+public static class MyRunnable implements Runnable {
+    private final WeakReference<Activity> mActivity;
+
+    public MyRunnable(Activity activity) {
+        mActivity = new WeakReference<>(activity);
+    }
+
+    @Override
+    public void run() {
+        Activity activity = mActivity.get();
+        if (activity != null) {
+            Button btn = (Button) activity.findViewById(R.id.button);
+            btn.setBackgroundResource(R.drawable.defaultcard);
+        }
+    }
+}
+
+private MyRunnable mRunnable = new MyRunnable(this);
+
+public void onClick(View view) {
+    my_button.setBackgroundResource(R.drawable.icon);
+
+    // Execute the Runnable in 2 seconds
+    mHandler.postDelayed(mRunnable, 2000);
+}","Activity activity = mActivity.get();
+        if (activity != null) {
+            Button btn = (Button) activity.findViewById(R.id.button);
+            btn.setBackgroundResource(R.drawable.defaultcard);
+        }",Unclustered,"Activity activity = mActivity.get();
+        if (activity != null) {
+        }",Alternative recommendation
+https://stackoverflow.com/questions/23844667,David,https://stackoverflow.com/users/3451964/david,242,Detect if I am in release or debug mode in android,https://stackoverflow.com/questions/23844716,CommonsWare,https://stackoverflow.com/users/115145/commonsware,518,"if (BuildConfig.DEBUG) {
+  // do something for a debug build
+}","if (BuildConfig.DEBUG) {
+  // do something for a debug build
+}",Correlated statements,,
+https://stackoverflow.com/questions/4932462,Labeeb Panampullan,https://stackoverflow.com/users/477754/labeeb-panampullan,242,Animate the transition between fragments,https://stackoverflow.com/questions/4936159,Roman Nurik,https://stackoverflow.com/users/102703/roman-nurik,318,"ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);","ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);",Post-processing,,
+https://stackoverflow.com/questions/4638832,Fahad Ali,https://stackoverflow.com/users/568710/fahad-ali,242,How to programmatically set the layout_align_parent_right attribute of a Button in Relative Layout?,https://stackoverflow.com/questions/4639012,Rich Schuler,https://stackoverflow.com/users/6391/rich-schuler,576,"RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)button.getLayoutParams();
+params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+params.addRule(RelativeLayout.LEFT_OF, R.id.id_to_be_left_of);
+
+button.setLayoutParams(params); //causes layout update","RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)button.getLayoutParams();
+params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+params.addRule(RelativeLayout.LEFT_OF, R.id.id_to_be_left_of);
+
+button.setLayoutParams(params); //causes layout update",Correlated statements,"RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)button.getLayoutParams();
+params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+params.addRule(RelativeLayout.LEFT_OF, R.id.id_to_be_left_of);",Exact recommendation
+https://stackoverflow.com/questions/16208365,user2134412,N/A,241,How to create a circular ImageView in Android?,https://stackoverflow.com/questions/16208548,Permita,https://stackoverflow.com/users/930044/permita,423,"import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.util.AttributeSet;
+import android.widget.ImageView;
+
+public class RoundedImageView extends ImageView {
+
+    public RoundedImageView(Context context) {
+        super(context);
+    }
+
+    public RoundedImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public RoundedImageView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+
+        Drawable drawable = getDrawable();
+
+        if (drawable == null) {
+            return;
+        }
+
+        if (getWidth() == 0 || getHeight() == 0) {
+            return;
+        }
+        Bitmap b = ((BitmapDrawable) drawable).getBitmap();
+        Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
+
+        int w = getWidth();
+        @SuppressWarnings(""unused"")
+        int h = getHeight();
+
+        Bitmap roundBitmap = getCroppedBitmap(bitmap, w);
+        canvas.drawBitmap(roundBitmap, 0, 0, null);
+
+    }
+
+    public static Bitmap getCroppedBitmap(Bitmap bmp, int radius) {
+        Bitmap sbmp;
+
+        if (bmp.getWidth() != radius || bmp.getHeight() != radius) {
+            float smallest = Math.min(bmp.getWidth(), bmp.getHeight());
+            float factor = smallest / radius;
+            sbmp = Bitmap.createScaledBitmap(bmp,
+                    (int) (bmp.getWidth() / factor),
+                    (int) (bmp.getHeight() / factor), false);
+        } else {
+            sbmp = bmp;
+        }
+
+        Bitmap output = Bitmap.createBitmap(radius, radius, Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final String color = ""#BAB399"";
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, radius, radius);
+
+        paint.setAntiAlias(true);
+        paint.setFilterBitmap(true);
+        paint.setDither(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        paint.setColor(Color.parseColor(color));
+        canvas.drawCircle(radius / 2 + 0.7f, radius / 2 + 0.7f,
+                radius / 2 + 0.1f, paint);
+        paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+        canvas.drawBitmap(sbmp, rect, rect, paint);
+
+        return output;
+    }
+
+}","Drawable drawable = getDrawable();
+
+        if (drawable == null) {
+            return;
+        }
+
+        if (getWidth() == 0 || getHeight() == 0) {
+            return;
+        }
+        Bitmap b = ((BitmapDrawable) drawable).getBitmap();
+        Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);
+
+        int w = getWidth();
+        @SuppressWarnings(""unused"")
+        int h = getHeight();
+
+        Bitmap roundBitmap = getCroppedBitmap(bitmap, w);
+        canvas.drawBitmap(roundBitmap, 0, 0, null);",Error checking and handling,"Drawable drawable = getDrawable();
+
+        if (drawable == null) {
+            return;
+        }
+
+        if (getWidth() == 0 || getHeight() == 0) {
+            return;
+        }
+        Bitmap b = ((BitmapDrawable) drawable).getBitmap();
+        Bitmap bitmap = b.copy(Bitmap.Config.ARGB_8888, true);",Exact recommendation
+https://stackoverflow.com/questions/13341560,Amit,https://stackoverflow.com/users/720176/amit,241,How to create a Custom Dialog box in android?,https://stackoverflow.com/questions/13342157,Chintan Khetiya,https://stackoverflow.com/users/1562548/chintan-khetiya,411,"public class CustomDialogClass extends Dialog implements
+    android.view.View.OnClickListener {
+
+  public Activity c;
+  public Dialog d;
+  public Button yes, no;
+
+  public CustomDialogClass(Activity a) {
+    super(a);
+    // TODO Auto-generated constructor stub
+    this.c = a;
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    setContentView(R.layout.custom_dialog);
+    yes = (Button) findViewById(R.id.btn_yes);
+    no = (Button) findViewById(R.id.btn_no);
+    yes.setOnClickListener(this);
+    no.setOnClickListener(this);
+
+  }
+
+  @Override
+  public void onClick(View v) {
+    switch (v.getId()) {
+    case R.id.btn_yes:
+      c.finish();
+      break;
+    case R.id.btn_no:
+      dismiss();
+      break;
+    default:
+      break;
+    }
+    dismiss();
+  }
+}","super.onCreate(savedInstanceState);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    setContentView(R.layout.custom_dialog);
+    yes = (Button) findViewById(R.id.btn_yes);
+    no = (Button) findViewById(R.id.btn_no);
+    yes.setOnClickListener(this);
+    no.setOnClickListener(this);",Configuring objects,"super.onCreate(savedInstanceState);
+    requestWindowFeature(Window.FEATURE_NO_TITLE);
+    setContentView(R.layout.custom_dialog);
+    yes = (Button) findViewById(R.id.btn_yes);
+    no = (Button) findViewById(R.id.btn_no);",Exact recommendation

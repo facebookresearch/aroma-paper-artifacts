@@ -1,0 +1,290 @@
+{
+  "path": "query_file6.java",
+  "endline": 9,
+  "ast": [
+    "{###}",
+    {
+      "trailing": "\n\n        ",
+      "leading": " ",
+      "line": 2,
+      "token": "{"
+    },
+    [
+      "#;",
+      [
+        "##",
+        {
+          "trailing": " ",
+          "leading": "\n\n        ",
+          "line": 4,
+          "leaf": true,
+          "token": "StringBuffer"
+        },
+        [
+          "#=#",
+          {
+            "trailing": " ",
+            "leading": " ",
+            "var": true,
+            "line": 4,
+            "leaf": true,
+            "token": "strBuf"
+          },
+          {
+            "trailing": " ",
+            "leading": " ",
+            "line": 4,
+            "token": "="
+          },
+          [
+            "new#",
+            {
+              "trailing": " ",
+              "leading": " ",
+              "line": 4,
+              "token": "new"
+            },
+            [
+              "#()",
+              {
+                "trailing": "",
+                "leading": " ",
+                "line": 4,
+                "leaf": true,
+                "token": "StringBuffer"
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 4,
+                "token": "("
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 4,
+                "token": ")"
+              }
+            ]
+          ]
+        ]
+      ],
+      {
+        "trailing": "\n        ",
+        "leading": "",
+        "line": 4,
+        "token": ";"
+      }
+    ],
+    [
+      "#;",
+      [
+        "##",
+        {
+          "trailing": " ",
+          "leading": "\n        ",
+          "line": 5,
+          "leaf": true,
+          "token": "Iterator"
+        },
+        [
+          "#=#",
+          {
+            "trailing": " ",
+            "leading": " ",
+            "var": true,
+            "line": 5,
+            "leaf": true,
+            "token": "itr"
+          },
+          {
+            "trailing": " ",
+            "leading": " ",
+            "line": 5,
+            "token": "="
+          },
+          [
+            "#.#",
+            {
+              "trailing": "",
+              "leading": " ",
+              "var": true,
+              "line": 5,
+              "leaf": true,
+              "token": "list"
+            },
+            {
+              "trailing": "",
+              "leading": "",
+              "line": 5,
+              "token": "."
+            },
+            [
+              "#()",
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 5,
+                "leaf": true,
+                "token": "iterator"
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 5,
+                "token": "("
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 5,
+                "token": ")"
+              }
+            ]
+          ]
+        ]
+      ],
+      {
+        "trailing": "\n        ",
+        "leading": "",
+        "line": 5,
+        "token": ";"
+      }
+    ],
+    [
+      "while##",
+      {
+        "trailing": " ",
+        "leading": "\n        ",
+        "line": 6,
+        "token": "while"
+      },
+      [
+        "(#)",
+        {
+          "trailing": "",
+          "leading": " ",
+          "line": 6,
+          "token": "("
+        },
+        [
+          "#.#",
+          {
+            "trailing": "",
+            "leading": "",
+            "var": true,
+            "line": 6,
+            "leaf": true,
+            "token": "itr"
+          },
+          {
+            "trailing": "",
+            "leading": "",
+            "line": 6,
+            "token": "."
+          },
+          [
+            "#()",
+            {
+              "trailing": "",
+              "leading": "",
+              "line": 6,
+              "leaf": true,
+              "token": "hasNext"
+            },
+            {
+              "trailing": "",
+              "leading": "",
+              "line": 6,
+              "token": "("
+            },
+            {
+              "trailing": "",
+              "leading": "",
+              "line": 6,
+              "token": ")"
+            }
+          ]
+        ],
+        {
+          "trailing": " ",
+          "leading": "",
+          "line": 6,
+          "token": ")"
+        }
+      ],
+      [
+        "{#}",
+        {
+          "trailing": "\n            ",
+          "leading": " ",
+          "line": 6,
+          "token": "{"
+        },
+        [
+          "#;",
+          [
+            "#.#",
+            {
+              "trailing": "",
+              "leading": "\n            ",
+              "var": true,
+              "line": 7,
+              "leaf": true,
+              "token": "itr"
+            },
+            {
+              "trailing": "",
+              "leading": "",
+              "line": 7,
+              "token": "."
+            },
+            [
+              "#()",
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 7,
+                "leaf": true,
+                "token": "next"
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 7,
+                "token": "("
+              },
+              {
+                "trailing": "",
+                "leading": "",
+                "line": 7,
+                "token": ")"
+              }
+            ]
+          ],
+          {
+            "trailing": "\n        ",
+            "leading": "",
+            "line": 7,
+            "token": ";"
+          }
+        ],
+        {
+          "trailing": "\n    ",
+          "leading": "\n        ",
+          "line": 8,
+          "token": "}"
+        }
+      ]
+    ],
+    {
+      "trailing": "\n",
+      "leading": "\n    ",
+      "line": 9,
+      "token": "}"
+    }
+  ],
+  "method": "m",
+  "beginline": 2,
+  "class": "C"
+}

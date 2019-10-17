@@ -1,0 +1,170 @@
+﻿title,code_snippet,query_code_snippet,recommendation_result,recommendation_code_snippet_url
+1. Db transaction,"db.beginTransaction();
+try {
+  ...
+  db.setTransactionSuccessful();
+} finally {
+  db.endTransaction();
+}","db.beginTransaction();
+db.setTransactionSuccessful();",Recall,"https://github.com/wordpress-mobile/WordPress-Android/blob/fec178d21554d455c738f72d20a0c8fd769ce178/WordPress/src/main/java/org/wordpress/android/datasets/ReaderUserTable.java#L59,L78"
+2. Get/Release cursor,"Cursor cursor = ....;
+try {
+  do something with the cursor
+} finally {
+  cursor.close();
+}",Cursor cursor = null;,Recall,"https://github.com/siacs/Conversations/blob/e27e3ecf92fc2516bca80a41844fad1b63efbb27/src/main/java/eu/siacs/conversations/persistance/DatabaseBackend.java#L875,L882"
+3. Fragment Transaction,"FragmentManager fragmentManager = getFragmentManager();
+Fragment newFragment = new ExampleFragment();
+FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+transaction.replace(R.id.fragment_container, newFragment);
+transaction.addToBackStack(null);
+
+transaction.commit();","FragmentManager fragmentManager = getFragmentManager();
+Fragment newFragment = new ExampleFragment();
+FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+transaction.replace(R.id.fragment_container, newFragment);
+transaction.addToBackStack(null);",Recall,"https://github.com/arcbit/arcbit-android/blob/88c6b398def5ff64ae9abff3ccda2524dc346208/app/src/main/java/com/arcbit/arcbit/ui/AccountsFragment.java#L203,L215"
+4. Show Toast,"Toast toast = Toast.makeText(context, text, duration);
+toast.show();","Toast toast = Toast.makeText(context, text, duration);",Recall,"https://github.com/klinker24/Android-SlidingMessaging/blob/83fd350fb3a0f129ab6115d4ced69c6876d3b158/src/main/java/com/klinker/android/messaging_sliding/security/SetPinActivity.java#L75,L76"
+5. Show AlertDialog,"AlertDialogBuilder builder = new AlertDialog.Builder(context);
+// several methods to set up the dialog
+builder.setTitle("""");
+
+// do stuff with the builder
+builder.setTitle(""Delete entry"");
+builder.setMessage(""Are you sure you want to delete this entry?"");
+
+AlertDialog alertDialog = builder.create();
+alertDialog.show();","AlertDialogBuilder builder = new AlertDialog.Builder(context);
+builder.setTitle(""some title"");
+builder.setMessage(""some message"");",Recall,"https://github.com/quemb/QMBForm/blob/95ddd131669531e61d75a7515b29f374fb557272/lib/QMBForm/src/main/java/com/quemb/qmbform/view/FormTextPickerDialogFieldCell.java#L83,L87"
+6. Retrieve/Release Parcel,"android.os.Parcel _data = android.os.Parcel.obtain();
+try {
+  // do stuff with the parcel (e.g.)
+  _data.writeInterfaceToken(DESCRIPTOR);
+}
+finally {
+  _data.recycle();
+}",android.os.Parcel _data = android.os.Parcel.obtain();,Recall,"https://github.com/twjitm/afhq/blob/fa1e423096faaa9392af460e43c8bb97f0a7e14c/gen/com/example/android/ITelephony.java#L438,L451"
+7a. Create/Send Intent,"Intent i = new Intent(EditActivity.this, ViewActivity.class);
+i.putExtra(""name"", edtName.getText().toString();
+i.putExtra(""surname"", edtSurname.getText().toString();
+i.putExtra(""email"", edtEmail.getText().toString();
+startActivity(i);","Intent i = new Intent(EditActivity.this, ViewActivity.class);
+i.putExtra(""name"", edtName.getText().toString());",Recall,"https://github.com/jmimohsin/Android-Google-Map-2/blob/e2c1defd6b3144cd423d58d2834ba12b9d101509/src/com/example/friendlocation/Signin.java#L151,L157"
+7b. Create/Send Intent,"Intent i = new Intent(EditActivity.this, ViewActivity.class);
+Bundle b = new Bundle();
+b.putString(""name"", edtName.getText().toString());
+b.putString(""surname"", edtSurname.getText().toString());
+b.putString(""email"", edtEmail.getText().toString());
+i.putExtras(b);
+startActivity(i);","Intent i = new Intent(EditActivity.this, ViewActivity.class);
+Bundle b = new Bundle();",No Recall,
+7c. Create/Send Intent,"Intent i = new Intent(EditActivity.this, ViewActivity.class);
+Bundle b = new Bundle();
+i.putExtras(b);
+startService(i);","Intent i = new Intent(EditActivity.this, ViewActivity.class);
+Bundle b = new Bundle();",No Recall,
+8. Retrieve from backstack,"if (getFragmentManager().getBackStackEntryCount() > 0) {
+  getFragmentManager().popBackStack();
+} else {
+  super.onBackPressed(); // this is there if used in the onBackPressed callback
+}","if (getFragmentManager().getBackStackEntryCount() > 0) {
+  getFragmentManager().popBackStack();
+}",Recall,"https://github.com/wordpress-mobile/WordPress-Android/blob/fec178d21554d455c738f72d20a0c8fd769ce178/WordPress/src/main/java/org/wordpress/android/ui/publicize/PublicizeListActivity.java#L219,L224"
+9. Query ContentProvider,"// get the content resolver from the context
+ContentResolver contentResolver = context.getContentResolver();
+
+// query the provider
+android.database.Cursor mCursor = contentResolver.query(UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
+    mProjection,                        // The columns to return for each row
+    mSelectionClause                    // Selection criteria
+    mSelectionArgs,                     // Selection criteria
+    mSortOrder);
+
+// now one has to operate on the cursor","ContentResolver contentResolver = context.getContentResolver();
+android.database.Cursor mCursor = contentResolver.query();",Recall,"https://github.com/varunon9/Remote-Control-PC/blob/c12ce4b6af3aa0b9ad8bbdc3f5bcb6bd3c919806/RemoteControlPC-Studio/app/src/main/java/me/varunon9/remotecontrolpc/mediaplayer/SongsList.java#L24,L26"
+10. Insert ContentProvider data,"ContentValues mNewValues = new ContentValues();
+mNewValues.put(UserDictionary.Words.APP_ID, ""example.user"");
+
+mNewUri = getContentResolver().insert(
+    UserDictionary.Word.CONTENT_URI,   // the user dictionary content URI
+    mNewValues                          // the values to insert
+);","ContentValues mNewValues = new ContentValues();
+mNewValues.put(UserDictionary.Words.APP_ID, ""example.user"");",Recall,"https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/6e9fd9814fd2f3ce0125f433ef8967e161d44aee/app/src/test/java/com/anysoftkeyboard/dictionaries/content/AndroidUserDictionaryTest.java#L109,L118"
+11. Update ContentProvider data,"ContentValues mNewValues = new ContentValues();
+mNewValues.put(UserDictionary.Words.APP_ID, ""example.user"");
+
+mNewUri = getContentResolver().update(
+    UserDictionary.Word.CONTENT_URI,   // the user dictionary content URI
+    mNewValues                          // the values to insert
+);","ContentValues mNewValues = new ContentValues();
+mNewValues.put(UserDictionary.Words.APP_ID, ""example.user"");",Recall,"https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/6e9fd9814fd2f3ce0125f433ef8967e161d44aee/app/src/test/java/com/anysoftkeyboard/dictionaries/content/AndroidUserDictionaryTest.java#L109,L118"
+12. Delete ContentProvider data,"ContentValues mNewValues = new ContentValues();
+mNewValues.put(UserDictionary.Words.APP_ID, ""example.user"");
+
+// Defines selection criteria for the rows you want to delete
+String mSelectionClause = UserDictionary.Words.APP_ID + "" LIKE ?"";
+String[] mSelectionArgs = {""user""};
+
+// Defines a variable to contain the number of rows deleted
+int mRowsDeleted = 0;
+
+...
+
+// Deletes the words that match the selection criteria
+mRowsDeleted = getContentResolver().delete(
+    UserDictionary.Words.CONTENT_URI,   // the user dictionary content URI
+    mSelectionClause                    // the column to select on
+    mSelectionArgs                      // the value to compare to
+);","mRowsDeleted = getContentResolver().delete(
+    UserDictionary.Words.CONTENT_URI,   // the user dictionary content URI
+    mSelectionClause                    // the column to select on
+    mSelectionArgs                      // the value to compare to
+);",No Recall,
+13. Build/Send notification,"NotificationCompat.Builder mBuilder =
+        new NotificationCompat.Builder(this)
+        .setSmallIcon(R.drawable.notification_icon)
+        .setContentTitle(""My notification"")
+        .setContentText(""Hello World!"");
+// Creates an explicit intent for an Activity in your app
+Intent resultIntent = new Intent(this, ResultActivity.class);
+
+// The stack builder object will contain an artificial back stack for the
+// started Activity.
+// This ensures that navigating backward from the Activity leads out of
+// your application to the Home screen.
+TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+// Adds the back stack for the Intent (but not the Intent itself)
+stackBuilder.addParentStack(ResultActivity.class);
+// Adds the Intent that starts the Activity to the top of the stack
+stackBuilder.addNextIntent(resultIntent);
+PendingIntent resultPendingIntent =
+        stackBuilder.getPendingIntent(
+            0,
+            PendingIntent.FLAG_UPDATE_CURRENT
+        );
+mBuilder.setContentIntent(resultPendingIntent);
+NotificationManager mNotificationManager =
+    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+// mId allows you to update the notification later on.
+mNotificationManager.notify(mId, mBuilder.build());","NotificationCompat.Builder mBuilder =
+        new NotificationCompat.Builder(this)
+        .setSmallIcon(R.drawable.notification_icon)
+        .setContentTitle(""My notification"")
+        .setContentText(""Hello World!"");",Recall,"https://github.com/nextcloud/android/blob/038019b2928fe9c819796645faaaeb6257b890f6/src/main/java/com/owncloud/android/jobs/MediaFoldersDetectionJob.java#L154,L164"
+14. Restore Preferences,"SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+boolean silent = settings.getBoolean(""silentMode"", false);","SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);",Recall,"https://github.com/0xpr03/VocableTrainer-Android/blob/e17134f50eef3d91a45efa35c883705bee508688/app/src/main/java/vocabletrainer/heinecke/aron/vocabletrainer/activity/MainActivity.java#L33,L34"
+15. Edit Preferences,"// We need an Editor object to make preference changes.
+// All objects are from android.context.Context
+SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+SharedPreferences.Editor editor = settings.edit();
+editor.putBoolean(""silentMode"", mSilentMode);
+
+// Commit the edits!
+editor.commit();
+// or equivalently editor.apply()","SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+SharedPreferences.Editor editor = settings.edit();
+editor.putBoolean(""silentMode"", mSilentMode);",Recall,"https://github.com/0xpr03/VocableTrainer-Android/blob/e17134f50eef3d91a45efa35c883705bee508688/app/src/main/java/vocabletrainer/heinecke/aron/vocabletrainer/activity/MainActivity.java#L72,L75"
