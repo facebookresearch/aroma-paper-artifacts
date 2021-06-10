@@ -355,7 +355,7 @@ def counter_vectorize(rpath, wpath):
     vectorizer = CountVectorizer(min_df=1, binary=True)
     counter_matrix = vectorizer.fit_transform(documents)
     with open(wpath, "wb") as outf:
-        pickle.dump((vectorizer, counter_matrix), outf)
+        pickle.dump((vectorizer, counter_matrix), outf, protocol=4)
 
 
 def read_all_records(rpath):
